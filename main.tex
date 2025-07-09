@@ -1,0 +1,336 @@
+%
+%Academic CV LaTeX Template
+% Author: Dubasi Pavan Kumar
+% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: pavankumard.pg19.ma@nitp.ac.in
+%
+
+
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% Font options
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+
+\begin{document}
+\headerfontiii
+
+% Header
+\begin{center}
+    {\Large\textbf{Duc Hoang}}
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    +1-901-628-8339 | \href{mailto:dhoang@mit.edu}{dhoang@mit.edu} | 
+    \href{https://www.yourwebsite.com/}{Google Scholar}|
+    \socialicon{\faGithub} \href{https://github.com/your-username}{Duchstf} 
+    | Citizenship: Vietnam
+    }
+\end{center}
+\vspace{-6mm}
+
+\section{\textbf{Summary}}
+\vspace{1mm}
+\small{
+High-energy physicist specializing in machine learning, data science, and real-time FPGA systems. Extensive experience delivering production-level ultra-low-latency ML inference on FPGAs and petabyte-scale data analysis for CERN’s CMS experiment. Proven leader in multi-institutional projects, skilled in developing custom ML solutions and deploying robust, high-performance software.
+}
+\vspace{-2mm}
+
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Massachusetts Institute of Technology (MIT)}{Cambridge, MA}
+{PhD, High Energy Physics}{2021 - 2026}
+
+\resumeSubheading
+{Rhodes College}{Memphis, USA}
+{B.S., Physics, Summa Cum Laude}{2017-2021}
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+
+
+
+\section{\textbf{Professional Experience}}
+\vspace{-0.4mm}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {{MIT \& European Organization for Nuclear Research (CERN)}}{Cambridge, USA \& Geneva, Switzerland}
+      {Graduate Researcher \& Next Generation Trigger PhD Fellow}{2021 - Now}
+      \resumeItemListStart
+        \item Coordinated multi-institutional team to develop \textbf{ultra-low-latency FPGA-accelerated ML models} for CMS Level-1 Trigger, which processes approximately 10\% of global internet traffic in real time. \href{https://www.youtube.com/watch?v=JvdCE5woYuY}{Hear me explain it along the trigger leardership team} \textbf{[1]}
+        \item Built first \textbf{FPGA-based ML algorithms for real-time jet tagging} and delivered cross-platform, low-latency data transfer tests between different FPGA board platforms. \textbf{[2]}
+        \item Analyzed all \textbf{Run 2 CMS data (a few PBs)} to deliver \textbf{most sensitive Higgs $\to b\overline{b}$ measurement in the V(qq)H(bb) decay channel}, invited presentation at Rencontres de Moriond 2025. \textbf{[3]}
+        \item Created and taught data analysis projects for \textbf{MIT 8.16/8.316: Data Science in Physics}, which is published on \textbf{MITx} course \textbf{\href{https://mitxonline.mit.edu/courses/course-v1:MITxT+8.S50.2x/}{Computational Data Science in Physics}}. 
+      \resumeItemListEnd 
+  \resumeSubheading
+    {Fermi National Accelerator Laboratory}{Chicago, USA}
+    {Undergraduate Researcher}{2019 - 2021}
+    \resumeItemListStart
+      \item Developer of  \href{https://github.com/fastmachinelearning/hls4ml}{hls4ml}, A package for \textbf{ultra-low-latency machine learning inference in FPGAs} using high level synthesis language (HLS). \textbf{[4]}
+      \item Designed superconducting magnet quench detection systems \textbf{[5]}
+      \item Analyzed simulation data to predict potential signal gains for the real-time trigger systems for Light Dark Matter Experiment (LDMX). \textbf{[6]}
+
+      \item Machine Learning analysis to infer hyper-parameter optimization performance of models used in the MINERvA Experiment. \textbf{[7]}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section*{\textbf{Selected Publications \& Software}}
+\vspace{0.2mm}
+\small{
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}}]
+
+\item \textbf{CMS Collaboration}, ``The Phase-2 Upgrade of the CMS Level-1 Trigger", \url{https://cds.cern.ch/record/2714892}
+
+\item \textbf{CMS Collaboration}, 2025. ``Multiclass object tagging in the CMS Phase-2 Level-1 Correlator Trigger", \url{https://cds.cern.ch/record/2936315.}
+
+\item \textbf{CMS Collaboration}, ``Search for a boosted Higgs boson decaying to bottom quark pairs in association with a hadronically decaying W or Z boson with the CMS detector using proton-proton collisions at $\sqrt{s}=13$ TeV", \url{https://cds.cern.ch/record/2928061}
+
+\item \texttt{hls4ml} \textbf{Community}, \href{[arXiv:2103.05579 [cs.LG]].}{``hls4ml: An Open-Source Codesign Workflow to Empower Scientific Low-Power Machine Learning Devices"}
+
+
+\item \textbf{D. Hoang} et al., ``Intelliquench: an adaptive machine learning system for detection of superconducting magnet quenches.," in \emph{IEEE Transactions on Applied Superconductivity}, doi: \url{10.1109/TASC.2021.3058229}.
+
+\item \textbf{LDMX Collaboration}, ``Current Status and Future Prospects for the Light Dark Matter eXperiment" \url{[arXiv:2203.08192 [hep-ex]]}.
+
+\item \textbf{D. Hoang} et al. ``Inferring Convolutional Neural Networks' Accuracies from Their Architectural Characterizations," \emph{2019 18th IEEE International Conference On Machine Learning And Applications (ICMLA)}, Boca Raton, FL, USA, 2019, pp. 1388-1391. DOI: \url{10.1109/ICMLA.2019.00226}
+
+\end{enumerate}
+\end{multicols}
+}
+
+
+\section{\textbf{Skills}}
+\vspace{-0.4mm}
+ \resumeHeadingSkillStart
+    \resumeSubItem{Specialized Area:}
+    {Big Data Analysis, Statistical Modeling, ultra-low latency FPGA Inference, Machine Learning}
+  \resumeSubItem{Programming Languages:}
+    {Python, C++, HTML, CSS, TypeScript}
+  \resumeSubItem{Web Technologies:}
+    {Django, Angular}
+  \resumeSubItem{Database Systems:}
+    {SQLite, PostgreSQL}
+  \resumeSubItem{Data Science \& Machine Learning:}
+    {Most Python-related machine learning tools.}
+\resumeSubItem{Cloud Technologies:}
+    {Google Cloud}
+  \resumeSubItem{DevOps \& Version Control:}
+    {Continous Integration, Docker, Singularity/Apptainer, Git}
+ \resumeHeadingSkillEnd
+
+\section{\textbf{Honors and Awards}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {The 2025 Breakthrough Prize in Fundamental Physics}
+  {Received as a member of the CMS Collaboration}
+  {2025}
+  {{}[\href{https://breakthroughprize.org/Laureates/1/L3994}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item The prize is awarded to physicists from theoretical, mathematical, or experimental physics that have made transformative contributions to fundamental physics, and specifically for recent advances. 
+\resumeItemListEnd
+
+\resumeProject
+  {Next Generation Trigger PhD fellow.}
+  {CERN}
+  {2024}
+  {{}[\href{https://cerncourier.com/a/next-generation-triggers-for-hl-lhc-and-beyond/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Awarded for exceptional PhD students to work along CERN scientists to develop the next generation trigger system at the Large Hadron Collider.
+\resumeItemListEnd
+
+\resumeProject
+  {MIT Public Service Fellow (PKG) Fellowship}
+  {Priscilla King Gray Public Service Center - MIT}
+  {2025}
+  {{}[\href{https://pkgcenter.mit.edu/programs/fellowships/pkg-fellowships/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Founded and organized, along with other International Olympiad Winners from Central Vietnam, a STEM \href{https://seas-cvn.com/}{summer school}, providing under-privileged high school students in Central Vietnam the opportunity to study emerging fields such as artificial intelligence, data science, programming, renewable energy, and quantum technology at no cost.
+\resumeItemListEnd
+
+\resumeProject
+  {2024-25 Christiaan Huygens Graduate Fellowship - MIT.}
+  {MIT School of Science}
+  {2025}
+  {}
+\resumeItemListStart
+  \item Internal Fellowship providing financial support for the full academic year in the School of Science for students with non-traditional backgrounds.
+\resumeItemListEnd
+
+\resumeProject
+  {Henry W Kendall (1955) first year graduate fellowship.}
+  {MIT Laboratory for Nuclear Science}
+  {2021}
+  {}
+\resumeItemListStart
+  \item Financial support for first year graduate students.
+\resumeItemListEnd
+
+\resumeProject
+  {Miscellaneous Undergraduate Awards.}
+  {Rhodes College}
+  {2017-2021}
+  {}
+\resumeItemListStart
+  \item  Research Award in Physics, Council on Undergraduate Research (CUR) Physics \& Astronomy Student Travel Award, W.O Shewmaker Award for Excellence in First-Year Search Program,  Award for Excellence in Physics by a First-Year Student, Summa Cum Laude, Sigma Pi Sigma, Phi Beta Kappa, Physics Honors.
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}
