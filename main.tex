@@ -159,6 +159,16 @@
 \newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
 \newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
 
+% Multicolumn
+\newcommand{\resumeProjectNarrow}[4]{
+\vspace{0.5mm}\item
+    \begin{tabularx}{\linewidth}[t]{@{}X r@{}}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \textit{\footnotesize{#2}} & \footnotesize{#4}
+    \end{tabularx}
+    \vspace{-2.4mm}
+}
+
 \begin{document}
 \headerfontiii
 
@@ -171,8 +181,8 @@
 \begin{center}
     \small{
     +1-901-628-8339 | \href{mailto:dhoang@mit.edu}{dhoang@mit.edu} | 
-    \href{https://www.yourwebsite.com/}{Google Scholar}|
-    \socialicon{\faGithub} \href{https://github.com/your-username}{Duchstf} 
+    \href{https://scholar.google.com/citations?user=3MtLWK8AAAAJ&hl=fr}{Google Scholar}|
+    \socialicon{\faGithub} \href{https://github.com/Duchstf}{Duchstf} 
     | Citizenship: Vietnam
     }
 \end{center}
@@ -181,7 +191,7 @@
 \section{\textbf{Summary}}
 \vspace{1mm}
 \small{
-High-energy physicist specializing in machine learning, data science, and real-time FPGA systems. Extensive experience delivering production-level ultra-low-latency ML inference on FPGAs and petabyte-scale data analysis for CERN’s CMS experiment. Proven leader in multi-institutional projects, skilled in developing custom ML solutions and deploying robust, high-performance software.
+PhD candidate in High-Energy Physics at MIT and CERN developing real-time machine learning systems for nanosecond-scale decision making. My work spans FPGA-optimized neural architectures, adaptive hardware-native learning algorithms, and large-scale statistical analyses for precision Higgs measurements.
 }
 \vspace{-2mm}
 
@@ -191,7 +201,7 @@ High-energy physicist specializing in machine learning, data science, and real-t
 
 \resumeSubheading
 {Massachusetts Institute of Technology (MIT)}{Cambridge, USA}
-{PhD, High Energy Physics. Thesis: Tagging Jets at the data frontier}{2021 - 2026}
+{PhD, Physics. Thesis: Harder, Better, Faster, Stronger: Pushing the Data Frontier at the Large Hadon Collider}{2021 - Present}
 
 \resumeSubheading
 {Rhodes College}{Memphis, USA}
@@ -210,22 +220,31 @@ High-energy physicist specializing in machine learning, data science, and real-t
       {{MIT \& European Organization for Nuclear Research (CERN)}}{Cambridge, USA \& Geneva, Switzerland}
       {Graduate Researcher \& Next Generation Trigger PhD Fellow}{2021 - Present}
       \resumeItemListStart
-        \item Coordinated multi-institutional team to develop \textbf{ultra-low-latency FPGA-accelerated ML models} for CMS Level-1 Trigger, which processes approximately 10\% of global internet traffic in real time. \href{https://www.youtube.com/watch?v=JvdCE5woYuY}{Hear me explain it along the trigger leardership team} \textbf{[1]}
-        \item Built first \textbf{FPGA-based ML algorithms for real-time jet tagging} and delivered cross-platform, low-latency data transfer tests between different FPGA board platforms. \textbf{[2]}
-        \item Analyzed all \textbf{Run 2 CMS data (a few PBs)} to deliver \textbf{most sensitive Higgs $\to b\overline{b}$ measurement in the V(qq)H(bb) decay channel}, invited presentation at Rencontres de Moriond 2025. \textbf{[3]}
-        \item Designed and led practical CERN training sessions on machine \textbf{learning techniques for FPGA-based Level-1 Trigger applications} for CERN students and researchers.
-        \item Created and taught data analysis projects for \textbf{MIT 8.16/8.316: Data Science in Physics}, which is published on \textbf{MITx} course \textbf{\href{https://mitxonline.mit.edu/courses/course-v1:MITxT+8.S50.2x/}{Computational Data Science in Physics}}.
-        \item Supervised MIT undergraduates on research projects involving the CMS Level-1 Trigger system and the development of \textbf{novel machine learning architectures on FPGAs.}\textbf{[8]}.
-      \resumeItemListEnd 
+        \item Coordinated multi-institutional team to develop \textbf{ultra-low-latency FPGA-accelerated ML models} for CMS Level-1 Trigger, which processes approximately 10\% of global internet traffic in real time. \href{https://www.youtube.com/watch?v=JvdCE5woYuY}{Hear me explain it along the trigger leardership team} \textbf{[2]}
+        \item Built \textbf{first FPGA-based ML algorithms for real-time jet tagging} and delivered cross-platform, low-latency data transfer tests between different FPGA board platforms. \textbf{[3]}
+        \item Analyzed all Run 2 CMS data (a few PBs) to deliver \textbf{most sensitive Higgs $\to b\overline{b}$ measurement in the V(qq)H(bb) decay channel}, invited presentation at Rencontres de Moriond 2025. \textbf{[4]}
+        \item Supervised MIT undergraduates and masters on research projects involving the CMS Level-1 Trigger system and the development of \textbf{novel machine learning architectures for ultra-fast and efficient inference on FPGAs.} \textbf{[1,9]}.
+        \item Designed and led practical CERN training sessions on machine learning techniques for FPGA-based Level-1 Trigger applications for CERN students and researchers.
+        \item Developed data analysis projects for MIT 8.16/8.316: Data Science in Physics, which is published on \textbf{MITx} course \textbf{\href{https://mitxonline.mit.edu/courses/course-v1:MITxT+8.S50.2x/}{Computational Data Science in Physics}}.
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Espresso (\href{https://sandbox.mit.edu/}{MIT Sandbox} Team) }{Cambridge, USA}
+      { Co-founder}{2025 -- Present}
+      \resumeItemListStart
+        \item Developing \textbf{efficient real-time and local data processing capabilities} for space and defense industry.
+        \item Defined the company’s technical vision and led early customer discoveries focusing on space applications.
+      \resumeItemListEnd
+
   \resumeSubheading
     {Fermi National Accelerator Laboratory}{Chicago, USA}
     {Undergraduate Researcher}{2019 - 2021}
     \resumeItemListStart
-      \item Developer of  \href{https://github.com/fastmachinelearning/hls4ml}{hls4ml}, A package for \textbf{ultra-low-latency machine learning inference in FPGAs} using high level synthesis language (HLS). \textbf{[4]}
-      \item Designed superconducting magnet quench detection systems \textbf{[5]}
-      \item Analyzed simulation data to predict potential signal gains for the real-time trigger systems for Light Dark Matter Experiment (LDMX). \textbf{[6]}
+      \item Developer of  \href{https://github.com/fastmachinelearning/hls4ml}{hls4ml}, A package for \textbf{ultra-low-latency machine learning inference in FPGAs} using high level synthesis language (HLS). \textbf{[5]}
+      \item Designed superconducting magnet quench detection systems \textbf{[6]}
+      \item Analyzed simulation data to predict potential signal gains for the real-time trigger systems for Light Dark Matter Experiment (LDMX). \textbf{[7]}
 
-      \item Machine Learning analysis to infer hyper-parameter optimization performance of models used in the MINERvA Experiment. \textbf{[7]}
+      \item Machine Learning analysis to infer hyper-parameter optimization performance of models used in the MINERvA Experiment \textbf{[8]}.
     \resumeItemListEnd
   \resumeSubHeadingListEnd
 \vspace{-6mm}
@@ -235,6 +254,9 @@ High-energy physicist specializing in machine learning, data science, and real-t
 \small{
 \begin{multicols}{2}
 \begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}}]
+
+\item \textbf{D. Hoang} et al. ``KANEL\'{E}: Kolmogorov–Arnold Networks for Efficient LUT-based Evaluation,'' 
+Proceedings of the 2026 ACM/SIGDA International Symposium on Field Programmable Gate Arrays (FPGA'26), Seaside, CA, USA, 2026. \url{https://arxiv.org/abs/2512.12850}
 
 \item \textbf{CMS Collaboration}, ``The Phase-2 Upgrade of the CMS Level-1 Trigger", \url{https://cds.cern.ch/record/2714892}
 
@@ -247,6 +269,8 @@ High-energy physicist specializing in machine learning, data science, and real-t
 
 \item \textbf{D. Hoang} et al., ``Intelliquench: an adaptive machine learning system for detection of superconducting magnet quenches.," in \emph{IEEE Transactions on Applied Superconductivity}, doi: \url{10.1109/TASC.2021.3058229}.
 
+\newpage
+
 \item \textbf{LDMX Collaboration}, ``Current Status and Future Prospects for the Light Dark Matter eXperiment" \url{[arXiv:2203.08192 [hep-ex]]}.
 
 \item \textbf{D. Hoang} et al. ``Inferring Convolutional Neural Networks' Accuracies from Their Architectural Characterizations," \emph{2019 18th IEEE International Conference On Machine Learning And Applications (ICMLA)}, Boca Raton, FL, USA, 2019, pp. 1388-1391. DOI: \url{10.1109/ICMLA.2019.00226}
@@ -258,24 +282,30 @@ High-energy physicist specializing in machine learning, data science, and real-t
 
 
 
-\section{\textbf{Skills}}
-\vspace{-0.4mm}
- \resumeHeadingSkillStart
-    \resumeSubItem{Specialized Area:}
-    {Big Data Analysis, Statistical Modeling, ultra-low latency FPGA Inference, Machine Learning}
-  \resumeSubItem{Programming Languages (years of experience):}
-    {Python (7), C++ (5), HTML(1), CSS(1), TypeScript(1)}
-  \resumeSubItem{Web Technologies:}
-    {Django, Angular}
-  \resumeSubItem{Database Systems:}
-    {SQLite, PostgreSQL}
-  \resumeSubItem{Data Science \& Machine Learning:}
-    {Most Python machine learning and data science tools.}
-\resumeSubItem{Cloud Technologies:}
-    {Google Cloud}
-  \resumeSubItem{DevOps \& Version Control:}
-    {Continous Integration, Docker, Singularity/Apptainer, Git}
- \resumeHeadingSkillEnd
+% \section{\textbf{Skills}}
+% \vspace{-0.4mm}
+%  \resumeHeadingSkillStart
+%     \resumeSubItem{Specialized Area:}
+%     {Big Data Analysis, Statistical Modeling, ultra-low latency FPGA Inference, Machine Learning}
+%   \resumeSubItem{Programming Languages (years of experience):}
+%     {Python (7), C++ (5), HTML(1), CSS(1), TypeScript(1)}
+%   \resumeSubItem{Web Technologies:}
+%     {Django, Angular}
+%   \resumeSubItem{Database Systems:}
+%     {SQLite, PostgreSQL}
+%   \resumeSubItem{Data Science \& Machine Learning:}
+%     {Most Python machine learning and data science tools.}
+% \resumeSubItem{Cloud Technologies:}
+%     {Google Cloud}
+%   \resumeSubItem{DevOps \& Version Control:}
+%     {Continous Integration, Docker, Singularity/Apptainer, Git}
+%  \resumeHeadingSkillEnd
+
+\section{Mentorship}
+
+\noindent
+\textbf{Aarush Gupta}, MIT BS/MS Thesis (CS \& Physics). \textit{Subsequent position: Jane Street} \\
+\textbf{Orion Foo}, MIT BS (CS \& Physics).
 
 \section{\textbf{Honors and Awards}}
 \vspace{-0.4mm}
@@ -305,7 +335,7 @@ High-energy physicist specializing in machine learning, data science, and real-t
   {2025}
   {{}[\href{https://pkgcenter.mit.edu/programs/fellowships/pkg-fellowships/}{\textcolor{darkblue}{\faIcon{globe}}}]}
 \resumeItemListStart
-  \item Founded and organized, along with other International Olympiad Medalists from Central Vietnam, a STEM \href{https://seas-cvn.com/}{summer school}, providing under-privileged high school students in Central Vietnam the opportunity to study emerging fields such as artificial intelligence, data science, programming, renewable energy, and quantum technology at no cost.
+  \item Founded and organized, along with other researchers from Central Vietnam, a STEM \href{https://seas-cvn.com/}{summer school}, providing under-privileged high school students in Central Vietnam the opportunity to study emerging fields such as artificial intelligence, data science, programming, renewable energy, and quantum technology at no cost.
 \resumeItemListEnd
 
 \resumeProject
@@ -323,7 +353,7 @@ High-energy physicist specializing in machine learning, data science, and real-t
   {2024}
   {}
 \resumeItemListStart
-  \item Internal Fellowship providing financial support for the full academic year in the School of Science for students with non-traditional backgrounds.
+  \item  Fellowship providing financial support for the full academic year in the School of Science for students with non-traditional backgrounds.
 \resumeItemListEnd
 
 \resumeProject
@@ -345,7 +375,7 @@ High-energy physicist specializing in machine learning, data science, and real-t
 \resumeItemListEnd
 
 \resumeProject
-  {Miscellaneous Undergraduate Awards.}
+  {Undergraduate Awards.}
   {Rhodes College}
   {2017-2021}
   {}
