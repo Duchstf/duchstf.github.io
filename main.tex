@@ -191,7 +191,7 @@
 \section{\textbf{Summary}}
 \vspace{1mm}
 \small{
-PhD candidate in High-Energy Physics at MIT and CERN developing real-time machine learning systems for nanosecond-scale decision making. My work spans FPGA-optimized neural architectures, adaptive hardware-native learning algorithms, and large-scale statistical analyses for precision Higgs measurements.
+PhD candidate in High-Energy Physics at MIT and CERN developing real-time machine learning systems for nanosecond-scale decision making. My work spans FPGA-optimized neural architectures, adaptive hardware-native learning algorithms, and large-scale statistical analyses for precision Higgs measurements. Recently, I’ve been extending these ideas to quantum–classical integration for scalable quantum technologies.
 }
 \vspace{-2mm}
 
@@ -220,12 +220,12 @@ PhD candidate in High-Energy Physics at MIT and CERN developing real-time machin
       {{MIT \& European Organization for Nuclear Research (CERN)}}{Cambridge, USA \& Geneva, Switzerland}
       {Graduate Researcher \& Next Generation Trigger PhD Fellow}{2021 - Present}
       \resumeItemListStart
-        \item Coordinated multi-institutional team to develop \textbf{ultra-low-latency FPGA-accelerated ML models} for CMS Level-1 Trigger, which processes approximately 10\% of global internet traffic in real time. \href{https://www.youtube.com/watch?v=JvdCE5woYuY}{Hear me explain it along the trigger leardership team} \textbf{[2]}
-        \item Built \textbf{first FPGA-based ML algorithms for real-time jet tagging} and delivered cross-platform, low-latency data transfer tests between different FPGA board platforms. \textbf{[3]}
-        \item Analyzed all Run 2 CMS data (a few PBs) to deliver \textbf{most sensitive Higgs $\to b\overline{b}$ measurement in the V(qq)H(bb) decay channel}, invited presentation at Rencontres de Moriond 2025. \textbf{[4]}
-        \item Supervised MIT undergraduates and masters on research projects involving the CMS Level-1 Trigger system and the development of \textbf{novel machine learning architectures for ultra-fast and efficient inference on FPGAs.} \textbf{[1,9]}.
-        \item Designed and led practical CERN training sessions on machine learning techniques for FPGA-based Level-1 Trigger applications for CERN students and researchers.
-        \item Developed data analysis projects for MIT 8.16/8.316: Data Science in Physics, which is published on \textbf{MITx} course \textbf{\href{https://mitxonline.mit.edu/courses/course-v1:MITxT+8.S50.2x/}{Computational Data Science in Physics}}.
+        \item Coordinated multi-institutional team to develop \textbf{ultra-low-latency FPGA-accelerated ML models} for CMS Level-1 Trigger, which processes approximately 10\% of global internet traffic in real time. \href{https://www.youtube.com/watch?v=JvdCE5woYuY}{Hear me explain it along the trigger leardership team} \textbf{[4]}
+        \item Built \textbf{first FPGA-based ML algorithms for real-time jet tagging} and delivered cross-platform, low-latency data transfer tests between different FPGA board platforms. \textbf{[5]}
+        \item Developed the \textbf{first sub-microsecond on-chip online learning system}, enabling model-free training at the timescale of physical processes like quantum control and fusion  \textbf{[2,3]}.
+        \item Analyzed all Run 2 CMS data (a few PBs) to deliver \textbf{most sensitive Higgs $\to b\overline{b}$ measurement in the V(qq)H(bb) decay channel}, invited presentation at Rencontres de Moriond 2025. \textbf{[6]}
+        \item Mentored MIT undergraduate and master’s theses related to CMS Level-1 Trigger, including \textbf{novel ML architectures for ultra-fast, efficient FPGA inference} \textbf{[1,11]}.
+        \item Designed and led hands-on CERN trainings/hardware schools on ML for FPGA-based Level-1 Trigger applications; developed MIT 8.16/8.316 data-analysis projects published on \textbf{MITx} (\href{https://mitxonline.mit.edu/courses/course-v1:MITxT+8.S50.2x/}{Computational Data Science in Physics}).
       \resumeItemListEnd
     
     \resumeSubheading
@@ -256,15 +256,25 @@ PhD candidate in High-Energy Physics at MIT and CERN developing real-time machin
 \begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}}]
 
 \item \textbf{D. Hoang} et al. ``KANEL\'{E}: Kolmogorov--Arnold Networks for Efficient LUT-based Evaluation,'' 
-\emph{Proceedings of the 2026 ACM/SIGDA International Symposium on Field Programmable Gate Arrays (FPGA'26)}, 
+\emph{Proceedings of the 2026 ACM/SIGDA International Symposium on Field Programmable Gate Arrays (ISFPGA'26)}, 
 Seaside, CA, USA, 2026. 
 \textbf{\emph{Best Paper Nominee (Top 3 Paper)}}
 \url{https://arxiv.org/abs/2512.12850}
+
+\item \textbf{D. Hoang}. ``Position: The Need for Ultrafast Training,'' 
+\emph{2nd Workshop on Domain-Specialized FPGAs (WDSFPGA'26)}, 
+Seaside, CA, USA, 2026. 
+\url{https://arxiv.org/abs/2602.02005}
+
+\item \textbf{D. Hoang} et al. ``Ultrafast On-chip Online Learning via Spline Locality in Kolmogorov-Arnold Networks,'' 
+2026. \emph{Under review at ICML'26}. 
+\url{https://arxiv.org/abs/2602.02056}
 
 
 \item \textbf{CMS Collaboration}, ``The Phase-2 Upgrade of the CMS Level-1 Trigger", \url{https://cds.cern.ch/record/2714892}
 
 \item \textbf{CMS Collaboration}, 2025. ``Multiclass object tagging in the CMS Phase-2 Level-1 Correlator Trigger." CMS Detector Performance Summary. \url{https://cds.cern.ch/record/2936315.}
+\newpage
 
 \item \textbf{CMS Collaboration}, ``Search for a boosted Higgs boson decaying to bottom quark pairs in association with a hadronically decaying W or Z boson with the CMS detector using proton-proton collisions at $\sqrt{s}=13$ TeV", \url{https://cds.cern.ch/record/2928061}
 
@@ -273,7 +283,6 @@ Seaside, CA, USA, 2026.
 
 \item \textbf{D. Hoang} et al., ``Intelliquench: an adaptive machine learning system for detection of superconducting magnet quenches.," in \emph{IEEE Transactions on Applied Superconductivity}, doi: \url{10.1109/TASC.2021.3058229}.
 
-\newpage
 
 \item \textbf{LDMX Collaboration}, ``Current Status and Future Prospects for the Light Dark Matter eXperiment" \url{[arXiv:2203.08192 [hep-ex]]}.
 
